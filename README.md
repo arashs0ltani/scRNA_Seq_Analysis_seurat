@@ -200,7 +200,7 @@ p <- VlnPlot(merged_se, features = c("nGene", "nUMI", "mitoRatio"), ncol = 3)
 p
 ```
 
-<img src="README_files/figure-gfm/QC_VlnPlot_nUMI_mitoR_nGene-1.png" style="display: block; margin: auto;" />
+<img src="images/QC_VlnPlot_nUMI_mitoR_nGene-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/QC_VlnPlot_nUMI_mitoR_nGene.png", width = 12, height = 6, res = 300)
@@ -213,7 +213,7 @@ p <- p1 + p2 + plot_layout(widths = c(1, 1.3))
 p
 ```
 
-<img src="README_files/figure-gfm/QC_Scatter_nUMI_mitoR_nGene-1.png" style="display: block; margin: auto;" />
+<img src="images/QC_Scatter_nUMI_mitoR_nGene-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/QC_Scatter_nUMI_mitoRatio_nGene.png", width = 12, height = 6, res = 300)
@@ -235,7 +235,7 @@ p <- merged_se@meta.data %>% ggplot(aes(x = log10GenesPerUMI, fill = sample)) +
 p
 ```
 
-<img src="README_files/figure-gfm/Novelty_by_Sample-1.png" style="display: block; margin: auto;" />
+<img src="images/Novelty_by_Sample-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/Novelty_by_Sample.png", width = 9, height = 8, res = 300)
@@ -255,7 +255,7 @@ p <- merged_se@meta.data %>% ggplot(aes(x = mitoRatio, fill = sample)) +
 p
 ```
 
-<img src="README_files/figure-gfm/mito_bySample-1.png" style="display: block; margin: auto;" />
+<img src="images/mito_bySample-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/mito_bySample.png", width = 9, height = 8, res = 300)
@@ -286,7 +286,7 @@ p <- merged_se@meta.data %>%
 p
 ```
 
-<img src="README_files/figure-gfm/correlation_nGene_UMIs_befor-1.png" style="display: block; margin: auto;" />
+<img src="images/correlation_nGene_UMIs_befor-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/correlation_nGene_UMIs_before.png", width = 9, height = 8, res = 300)
@@ -386,7 +386,7 @@ p <- cell_count %>%
 p
 ```
 
-<img src="README_files/figure-gfm/nCells_count_before_after_QC-1.png" style="display: block; margin: auto;" />
+<img src="images/nCells_count_before_after_QC-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/correlation_nGene_UMIs_before.png", width = 9, height = 8, res = 300)
@@ -417,7 +417,7 @@ p <- metadata_clean %>%
 p
 ```
 
-<img src="README_files/figure-gfm/unnamed-chunk-19-1.png" style="display: block; margin: auto;" />
+<img src="images/unnamed-chunk-19-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/correlation_nGene_UMIs_after.png", width = 9, height = 8, res = 300)
@@ -473,7 +473,7 @@ p2 <- LabelPoints(plot = p1, points = top10, repel = TRUE)
 p2
 ```
 
-<img src="README_files/figure-gfm/variable_feature-1.png" style="display: block; margin: auto;" />
+<img src="images/variable_feature-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p2, "plots/variable_features.png", width = 9, height = 8, res = 300)
@@ -513,7 +513,7 @@ barplot(table(seurat$Phase),
         ylab="Number of cells")
 ```
 
-<img src="README_files/figure-gfm/cell-cycle-plots-1.png" style="display: block; margin: auto;" />
+<img src="images/cell-cycle-plots-1.png" style="display: block; margin: auto;" />
 
 ``` r
 # Create the composite plot and save it
@@ -565,7 +565,7 @@ p2 <- DimPlot(seurat,
 p <- p1 + p2 + plot_layout(widths = c(1, 2)); p
 ```
 
-<img src="README_files/figure-gfm/unnamed-chunk-25-1.png" style="display: block; margin: auto;" />
+<img src="images/unnamed-chunk-25-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/pca_cell_cycle_phase.png", width = 12, height = 5, res = 300)
@@ -587,7 +587,7 @@ p2 <- DimPlot(seurat,
 p <- (p1 + p2) & NoLegend() + plot_layout(widths = c(1, 2)); p
 ```
 
-<img src="README_files/figure-gfm/unnamed-chunk-26-1.png" style="display: block; margin: auto;" />
+<img src="images/unnamed-chunk-26-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/pca_mitochondrial_expression.png", width = 12, height = 5, res = 600)
@@ -702,7 +702,7 @@ p <- DimPlot(seurat, reduction = "pca", split.by = "sample")
 p
 ```
 
-<img src="README_files/figure-gfm/unnamed-chunk-35-1.png" style="display: block; margin: auto;" />
+<img src="images/unnamed-chunk-35-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/pca_by_sample.png", width = 10, height = 7.5, res = 300)
@@ -758,7 +758,7 @@ p <- ElbowPlot(object = seurat, ndims = 50)
 p
 ```
 
-<img src="README_files/figure-gfm/unnamed-chunk-37-1.png" style="display: block; margin: auto;" />
+<img src="images/unnamed-chunk-37-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/pca_elbow_plot.png", width = 8, height = 6, res = 600)
@@ -817,7 +817,7 @@ information.
 p <- PCHeatmap(seurat, dims = 1:16, cells = 500, balanced = TRUE)
 ```
 
-<img src="README_files/figure-gfm/unnamed-chunk-39-1.png" style="display: block; margin: auto;" />
+<img src="images/unnamed-chunk-39-1.png" style="display: block; margin: auto;" />
 
 ``` r
 p
@@ -858,7 +858,7 @@ p <- p1 + p2 + plot_layout(widths = c(1, 1))
 p
 ```
 
-<img src="README_files/figure-gfm/unnamed-chunk-41-1.png" style="display: block; margin: auto;" />
+<img src="images/unnamed-chunk-41-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/umap_tsne_by_sample.png", width = 15, height = 8, res = 600)
@@ -895,7 +895,7 @@ p <- p1 + p2 + plot_layout(widths = c(1, 1))
 p
 ```
 
-<img src="README_files/figure-gfm/umap_tsne_clusters-1.png" style="display: block; margin: auto;" />
+<img src="images/umap_tsne_clusters-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/umap_tsne_clusters.png", width = 15, height = 8, res = 600)
@@ -954,7 +954,7 @@ p <- ggplot(seurat@meta.data) +
 p
 ```
 
-<img src="README_files/figure-gfm/cluster_sample_proportions-1.png" style="display: block; margin: auto;" />
+<img src="images/cluster_sample_proportions-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/cluster_sample_proportions.png", width = 9, height = 6, res = 600)
@@ -974,7 +974,7 @@ p <- (p1 + p2) & NoLegend()
 p
 ```
 
-<img src="README_files/figure-gfm/unnamed-chunk-46-1.png" style="display: block; margin: auto;" />
+<img src="images/unnamed-chunk-46-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/umap_tsne_clusters_by_sample.png", width = 15, height = 8, res = 600)
@@ -991,7 +991,7 @@ p <- (p1 / p2) & NoLegend()
 p
 ```
 
-<img src="README_files/figure-gfm/unnamed-chunk-47-1.png" style="display: block; margin: auto;" />
+<img src="images/unnamed-chunk-47-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/umap_tsne_clusters_by_phase.png", width = 10, height = 11, res = 600)
@@ -1026,7 +1026,7 @@ p <- (p1 / p2) & NoLegend()
 p
 ```
 
-<img src="README_files/figure-gfm/unnamed-chunk-48-1.png" style="display: block; margin: auto;" />
+<img src="images/unnamed-chunk-48-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/umap_tsne_qc_metrics.png", width = 7, height = 14, res = 600)
@@ -1071,7 +1071,7 @@ p <- map(paste0("PC_", 1:18), function(pc){
 p
 ```
 
-<img src="README_files/figure-gfm/umap_by_pc-1.png" style="display: block; margin: auto;" />
+<img src="images/umap_by_pc-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/umap_by_pc.png", width = 12, height = 10, res = 600)
@@ -1121,7 +1121,7 @@ p <- (p1 | p2) & NoLegend()
 p
 ```
 
-<img src="README_files/figure-gfm/fibroblast_markers_umap_tsne-1.png" style="display: block; margin: auto;" />
+<img src="images/fibroblast_markers_umap_tsne-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/fibroblast_markers_umap_tsne.png", width = 10, height = 8, res = 300)
@@ -1274,7 +1274,7 @@ p <- (p1 / p2) & NoLegend()
 p
 ```
 
-<img src="README_files/figure-gfm/singleR_vs_cluster_umap-1.png" style="display: block; margin: auto;" />
+<img src="images/singleR_vs_cluster_umap-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/singleR_vs_cluster_umap.png", width = 8, height = 10, res = 600)
@@ -1299,7 +1299,7 @@ p <- (p1 / p2) & NoLegend()
 p
 ```
 
-<img src="README_files/figure-gfm/endothelial_markers_umap_tsne-1.png" style="display: block; margin: auto;" />
+<img src="images/endothelial_markers_umap_tsne-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/endothelial_markers_umap_tsne.png", width = 8, height = 10, res = 300)
@@ -1324,7 +1324,7 @@ p <- (p1 + p2) & NoLegend()
 p
 ```
 
-<img src="README_files/figure-gfm/cd8a_expression_umap_tsne-1.png" style="display: block; margin: auto;" />
+<img src="images/cd8a_expression_umap_tsne-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/cd8a_expression_umap_tsne.png", width = 6, height = 10, res = 600)
@@ -1360,7 +1360,7 @@ p <- DotPlot(seurat,
 p
 ```
 
-<img src="README_files/figure-gfm/celltype_marker_dotplot-1.png" style="display: block; margin: auto;" />
+<img src="images/celltype_marker_dotplot-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/celltype_marker_dotplot.png", width = 14, height = 8, res = 600)
@@ -1373,7 +1373,7 @@ p <- DoHeatmap(seurat, features = c_markers) + NoLegend()
 p
 ```
 
-<img src="README_files/figure-gfm/celltype_marker_heatmap-1.png" style="display: block; margin: auto;" />
+<img src="images/celltype_marker_heatmap-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/celltype_marker_heatmap.png", width = 12, height = 10, res = 600)
@@ -1419,7 +1419,7 @@ p2 <- DimPlot(object = seurat,
 p <- p1/p2; p
 ```
 
-<img src="README_files/figure-gfm/annotated_celltypes_umap_tsne-1.png" style="display: block; margin: auto;" />
+<img src="images/annotated_celltypes_umap_tsne-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/annotated_celltypes_umap_tsne.png", width = 8, height = 12, res = 600)
@@ -1449,7 +1449,7 @@ p <- DimPlot(t_cells, label = TRUE) + NoLegend()
 p
 ```
 
-<img src="README_files/figure-gfm/tcell_subclustering_umap-1.png" style="display: block; margin: auto;" />
+<img src="images/tcell_subclustering_umap-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/tcell_subclustering_umap.png", width = 8, height = 6, res = 600)
@@ -1466,7 +1466,7 @@ p <- VlnPlot(t_cells,
 p
 ```
 
-<img src="README_files/figure-gfm/tcell_marker_violin-1.png" style="display: block; margin: auto;" />
+<img src="images/tcell_marker_violin-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/tcell_marker_violin.png", width = 12, height = 10, res = 600)
@@ -1487,7 +1487,7 @@ p <- DoHeatmap(t_cells, features = top10$gene) + NoLegend()
 p
 ```
 
-<img src="README_files/figure-gfm/tcell_subcluster_heatmap-1.png" style="display: block; margin: auto;" />
+<img src="images/tcell_subcluster_heatmap-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/tcell_subcluster_heatmap.png", width = 15, height = 12, res = 600)
@@ -1557,7 +1557,7 @@ p <- (p1 + p2) & NoLegend()
 p
 ```
 
-<img src="README_files/figure-gfm/unnamed-chunk-63-1.png" style="display: block; margin: auto;" />
+<img src="images/unnamed-chunk-63-1.png" style="display: block; margin: auto;" />
 
 ``` r
 save_png(p, "plots/tcell_subtypes_umap_tsne.png", width = 12, height = 5, res = 600)
@@ -1633,3 +1633,4 @@ sessionInfo()
     ## [109] dotCall64_1.2          listenv_0.9.1          viridisLite_0.4.2     
     ## [112] scales_1.4.0           ggridges_0.5.6         crayon_1.5.3          
     ## [115] rlang_1.1.6            cowplot_1.2.0
+

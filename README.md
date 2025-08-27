@@ -57,14 +57,14 @@ if (!dir.exists(results_dir)) {dir.create(results_dir)}
 
 ``` r
 # Create a standardized plotting function
-save_png <- function(ploti, 
+save_png <- function(p, 
                      filename, 
                      width = 16, 
                      height = 8.135, 
                      res = 300, 
                      units = "in") {
   png(filename = filename, width = width, height = height, units = units, res = res)
-  print(ploti)  # print() ensures ggplot / patchwork objects render
+  print(p)  
   invisible(dev.off())
 }
 ```
@@ -1633,4 +1633,5 @@ sessionInfo()
     ## [109] dotCall64_1.2          listenv_0.9.1          viridisLite_0.4.2     
     ## [112] scales_1.4.0           ggridges_0.5.6         crayon_1.5.3          
     ## [115] rlang_1.1.6            cowplot_1.2.0
+
 
